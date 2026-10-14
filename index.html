@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solar System</title>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+        background: #050711;
+        color: white;
+        font-family: system-ui, sans-serif;
+      }
+
+      #info {
+        position: absolute;
+        top: 16px;
+        left: 20px;
+        pointer-events: none;
+      }
+
+      h1 {
+        font-size: 1.25rem;
+        margin-bottom: 4px;
+      }
+
+      p {
+        color: #b8c2d8;
+        font-size: 0.9rem;
+      }
+
+      canvas {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="info">
+      <h1>Solar System</h1>
+      <p>Drag to rotate - Scroll to zoom</p>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
