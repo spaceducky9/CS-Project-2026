@@ -1,4 +1,4 @@
-import { EllipseCurve, Vector3 } from "three";
+import { EllipseCurve, Vector3 } from 'three';
 
 /**
  * 
@@ -16,7 +16,7 @@ export function createOrbit(a, b) {
         a, b, //Major and Minor Semi-axes
         0, 2 * Math.PI, //Start angle and End Angle
         false, //CounterClockwise
-        0
+        0.5 * Math.PI
     );
 }
 

@@ -1,6 +1,6 @@
-import { Timer } from "three"
-import { SceneManager } from "./SceneManager.js"
-import { SolarSystem } from "./SolarSystem.js"
+import { Timer } from 'three'
+import { SceneManager } from './SceneManager.js'
+import { SolarSystem } from './SolarSystem.js'
 
 
 export class Application {

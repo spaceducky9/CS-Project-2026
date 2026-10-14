@@ -1,5 +1,5 @@
-import { Sun } from "../bodies/Sun.js"
-import { Planet } from "../bodies/Planet.js"
+import {Sun} from '../bodies/Sun.js'
+import {Planet} from '../bodies/Planet.js'
 
 export class SolarSystem {
     constructor(scene) {
@@ -10,8 +10,8 @@ export class SolarSystem {
             color: 0xff9b4b,
             orbit: {
                 a: 10,
-                b: 7,
-                period: 10,
+                b: 9.8,
+                period: 30,
             },
         });
 
@@ -19,7 +19,7 @@ export class SolarSystem {
             radius: 0.6,
             color: 0x4b9bff,
             orbit: {
-                a: 21,
+                a: 24,
                 b: 20,
                 period: 20,
             },

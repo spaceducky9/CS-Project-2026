@@ -20,24 +20,25 @@ export class Planet {
 
         const material = new THREE.MeshStandardMaterial({
             color,
-            roughness: 0.8 // Make the material that our sphere will be
-        });
+            roughness: 0.8
+        }); // Make the material that our sphere will be
 
         this.mesh = new THREE.Mesh(geometry, material) // Form the sphere mesh.
 
         const points = this.curve.getPoints(200).map(
-            point => new THREE.Vector3(point.x, 0, point.y) // Get the points to draw the orbit
-        );
+            point => new THREE.Vector3(point.x, 0, point.y)
+        ); // Get the points to draw the orbit
 
         const geometryLine = new THREE.BufferGeometry().setFromPoints(points); // Create the line geometry
 
-        const materialLine = new THREE.LineBasicMaterial({ //Give it a texture
+        const materialLine = new THREE.LineBasicMaterial({
             color: 0x65718c
-        });
+        }); //Give it a texture
+
 
         this.orbitLine = new THREE.Line(
-            geometryLine, materialLine //Make Orbit line
-        );
+            geometryLine, materialLine
+        ); //Make Orbit line
     }
 
     addTo(scene) {
