@@ -41,7 +41,7 @@ export class SceneManager {
             new THREE.AmbientLight(0xffffff, 0.35)
         );
 
-        const sunlight = new THREE.PointLight(0xffffff, 180);
+        const sunlight = new THREE.PointLight(0xffffff, 500, 0, 2);
         this.scene.add(sunlight);
 
         window.addEventListener('resize', () => {

@@ -5,14 +5,16 @@ export class Planet {
     constructor({
         radius = 0.45,
         color = 0x4b9bff,
-        orbit
+        orbit,
+        focusSetting = middle
+        
     }) {
         if (!orbit || orbit.period <= 0) {
             throw new Error("Planet requires a valid orbit period."); //Make sure the planet has a valid period. Throw error otherwise.
         }
 
         this.orbit = orbit;
-        this.curve = createOrbit(orbit.a, orbit.b);
+        this.curve = createOrbit(orbit.a, orbit.b, orbit.counterclockwise, orbit.direction, focusSetting);
 
         const geometry = new THREE.SphereGeometry(
             radius, 32, 24 //Define the geometry that will end up as our sphere

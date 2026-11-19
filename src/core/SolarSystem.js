@@ -5,33 +5,70 @@ export class SolarSystem {
     constructor(scene) {
         this.sun = new Sun();
 
-        this.planet = new Planet({
-            radius: 0.45,
-            color: 0xff9b4b,
+        this.mercury = new Planet({
+            radius: 0.2,
+            color: 0x4b4b4b,
             orbit: {
-                a: 10,
-                b: 9.8,
-                period: 30,
+                a: 4,
+                b: 4,
+                period: 15*0.241, //15 period = 1 year
+                counterclockwise: false,
+                direction: 90,
+                
             },
+            focusSetting: "middle",
         });
 
-        this.planet2 = new Planet({
-            radius: 0.6,
-            color: 0x4b9bff,
+        this.venus = new Planet({
+            radius: 0.5,
+            color: 0xff9b4b,
             orbit: {
-                a: 24,
-                b: 20,
-                period: 20,
+                a: 8,
+                b: 8,
+                period: 15*0.615,
+                counterclockwise: false,
+                direction: 90,
+                
             },
+            focusSetting: "middle",
+        });
+
+        this.earth = new Planet({
+            radius: 0.5,
+            color: 0x5fcfff,
+            orbit: {
+                a: 15,
+                b: 15,
+                period: 15,
+                counterclockwise: false,
+                direction: 60,
+            },
+            focusSetting: "focus+",
+        });
+
+        this.mars = new Planet({
+            radius: 0.5,
+            color: 0xff9b4b,
+            orbit: {
+                a: 20,
+                b: 20,
+                period: 11.23500,
+                counterclockwise: false,
+                direction: 90,
+                
+            },
+            focusSetting: "middle",
         });
         
         this.sun.addTo(scene);
-        this.planet.addTo(scene);
-        this.planet2.addTo(scene);
+        this.mercury.addTo(scene);
+        this.venus.addTo(scene);
+        this.earth.addTo(scene);
     }
     
     update(simulationTime) {
-        this.planet.update(simulationTime);
-        this.planet2.update(simulationTime);
+        this.mercury.update(simulationTime);
+        this.venus.update(simulationTime);
+        this.earth.update(simulationTime);
     }
 }
